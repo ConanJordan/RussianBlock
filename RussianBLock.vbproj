@@ -74,7 +74,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Element\Brick.vb" />
-    <Compile Include="Element\Class1.vb" />
     <Compile Include="Element\ConstantData.vb" />
     <Compile Include="GameForm.vb">
       <SubType>Form</SubType>

@@ -5,7 +5,7 @@ Public Interface Brick
     Sub Sink()
 
     ' 砖块移动
-    Sub Move()
+    Sub Move(direction As ConstantData.Direction)
 
     ' 砖块旋转（顺时针）
     Sub Whilr()
