@@ -22,43 +22,42 @@ Partial Class GameForm
     'コード エディターを使って変更しないでください。
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PN_GamePad = New System.Windows.Forms.Panel()
         Me.MenuBar = New System.Windows.Forms.MenuStrip()
         Me.MI_Game = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.MI_Start = New System.Windows.Forms.ToolStripMenuItem()
         Me.MI_Pause = New System.Windows.Forms.ToolStripMenuItem()
         Me.MI_Stop = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MI_Rank = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MI_Help = New System.Windows.Forms.ToolStripMenuItem()
-        Me.关于游戏ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.操作指南ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MI_Difficulty = New System.Windows.Forms.ToolStripMenuItem()
         Me.MI_DiffRookie = New System.Windows.Forms.ToolStripMenuItem()
         Me.MI_DiffJunior = New System.Windows.Forms.ToolStripMenuItem()
         Me.MI_DiffNormal = New System.Windows.Forms.ToolStripMenuItem()
         Me.MI_DiffVeteran = New System.Windows.Forms.ToolStripMenuItem()
         Me.MI_DiffMaster = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MI_Rank = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MI_Help = New System.Windows.Forms.ToolStripMenuItem()
+        Me.关于游戏ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.操作指南ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PN_NextBrick = New System.Windows.Forms.Panel()
+        Me.PN_Status = New System.Windows.Forms.Panel()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuBar.SuspendLayout()
-        Me.Panel3.SuspendLayout()
+        Me.PN_Status.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Panel1
+        'PN_GamePad
         '
-        Me.Panel1.AllowDrop = True
-        Me.Panel1.BackColor = System.Drawing.Color.Black
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel1.Location = New System.Drawing.Point(12, 28)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(266, 412)
-        Me.Panel1.TabIndex = 0
+        Me.PN_GamePad.AllowDrop = True
+        Me.PN_GamePad.BackColor = System.Drawing.Color.Black
+        Me.PN_GamePad.Location = New System.Drawing.Point(12, 28)
+        Me.PN_GamePad.Name = "PN_GamePad"
+        Me.PN_GamePad.Size = New System.Drawing.Size(228, 380)
+        Me.PN_GamePad.TabIndex = 0
         '
         'MenuBar
         '
@@ -66,7 +65,7 @@ Partial Class GameForm
         Me.MenuBar.Location = New System.Drawing.Point(0, 0)
         Me.MenuBar.Name = "MenuBar"
         Me.MenuBar.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-        Me.MenuBar.Size = New System.Drawing.Size(504, 27)
+        Me.MenuBar.Size = New System.Drawing.Size(489, 27)
         Me.MenuBar.TabIndex = 1
         Me.MenuBar.Text = "MenuStrip1"
         '
@@ -78,29 +77,113 @@ Partial Class GameForm
         Me.MI_Game.Size = New System.Drawing.Size(47, 23)
         Me.MI_Game.Text = "游戏"
         '
-        'Panel2
+        'MI_Start
         '
-        Me.Panel2.BackColor = System.Drawing.Color.Black
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel2.Location = New System.Drawing.Point(347, 342)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(95, 95)
-        Me.Panel2.TabIndex = 2
+        Me.MI_Start.Name = "MI_Start"
+        Me.MI_Start.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D1), System.Windows.Forms.Keys)
+        Me.MI_Start.Size = New System.Drawing.Size(180, 24)
+        Me.MI_Start.Text = "开始"
         '
-        'Panel3
+        'MI_Pause
         '
-        Me.Panel3.BackColor = System.Drawing.Color.White
-        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel3.Controls.Add(Me.Label6)
-        Me.Panel3.Controls.Add(Me.Label5)
-        Me.Panel3.Controls.Add(Me.Label4)
-        Me.Panel3.Controls.Add(Me.Label3)
-        Me.Panel3.Controls.Add(Me.Label2)
-        Me.Panel3.Controls.Add(Me.Label1)
-        Me.Panel3.Location = New System.Drawing.Point(293, 37)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(199, 277)
-        Me.Panel3.TabIndex = 3
+        Me.MI_Pause.Name = "MI_Pause"
+        Me.MI_Pause.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D2), System.Windows.Forms.Keys)
+        Me.MI_Pause.Size = New System.Drawing.Size(180, 24)
+        Me.MI_Pause.Text = "暂停"
+        '
+        'MI_Stop
+        '
+        Me.MI_Stop.Name = "MI_Stop"
+        Me.MI_Stop.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D3), System.Windows.Forms.Keys)
+        Me.MI_Stop.Size = New System.Drawing.Size(180, 24)
+        Me.MI_Stop.Text = "结束"
+        '
+        'MI_Difficulty
+        '
+        Me.MI_Difficulty.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MI_DiffRookie, Me.MI_DiffJunior, Me.MI_DiffNormal, Me.MI_DiffVeteran, Me.MI_DiffMaster})
+        Me.MI_Difficulty.Name = "MI_Difficulty"
+        Me.MI_Difficulty.Size = New System.Drawing.Size(180, 24)
+        Me.MI_Difficulty.Text = "难度"
+        '
+        'MI_DiffRookie
+        '
+        Me.MI_DiffRookie.Name = "MI_DiffRookie"
+        Me.MI_DiffRookie.Size = New System.Drawing.Size(104, 24)
+        Me.MI_DiffRookie.Text = "菜鸟"
+        '
+        'MI_DiffJunior
+        '
+        Me.MI_DiffJunior.Name = "MI_DiffJunior"
+        Me.MI_DiffJunior.Size = New System.Drawing.Size(104, 24)
+        Me.MI_DiffJunior.Text = "新手"
+        '
+        'MI_DiffNormal
+        '
+        Me.MI_DiffNormal.Name = "MI_DiffNormal"
+        Me.MI_DiffNormal.Size = New System.Drawing.Size(104, 24)
+        Me.MI_DiffNormal.Text = "一般"
+        '
+        'MI_DiffVeteran
+        '
+        Me.MI_DiffVeteran.Name = "MI_DiffVeteran"
+        Me.MI_DiffVeteran.Size = New System.Drawing.Size(104, 24)
+        Me.MI_DiffVeteran.Text = "高手"
+        '
+        'MI_DiffMaster
+        '
+        Me.MI_DiffMaster.Name = "MI_DiffMaster"
+        Me.MI_DiffMaster.Size = New System.Drawing.Size(104, 24)
+        Me.MI_DiffMaster.Text = "大师"
+        '
+        'MI_Rank
+        '
+        Me.MI_Rank.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.MI_Rank.Name = "MI_Rank"
+        Me.MI_Rank.Size = New System.Drawing.Size(60, 23)
+        Me.MI_Rank.Text = "得分榜"
+        '
+        'MI_Help
+        '
+        Me.MI_Help.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.关于游戏ToolStripMenuItem, Me.操作指南ToolStripMenuItem})
+        Me.MI_Help.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.MI_Help.Name = "MI_Help"
+        Me.MI_Help.Size = New System.Drawing.Size(47, 23)
+        Me.MI_Help.Text = "帮助"
+        '
+        '关于游戏ToolStripMenuItem
+        '
+        Me.关于游戏ToolStripMenuItem.Name = "关于游戏ToolStripMenuItem"
+        Me.关于游戏ToolStripMenuItem.Size = New System.Drawing.Size(130, 24)
+        Me.关于游戏ToolStripMenuItem.Text = "关于游戏"
+        '
+        '操作指南ToolStripMenuItem
+        '
+        Me.操作指南ToolStripMenuItem.Name = "操作指南ToolStripMenuItem"
+        Me.操作指南ToolStripMenuItem.Size = New System.Drawing.Size(130, 24)
+        Me.操作指南ToolStripMenuItem.Text = "操作指南"
+        '
+        'PN_NextBrick
+        '
+        Me.PN_NextBrick.BackColor = System.Drawing.Color.Black
+        Me.PN_NextBrick.Location = New System.Drawing.Point(317, 313)
+        Me.PN_NextBrick.Name = "PN_NextBrick"
+        Me.PN_NextBrick.Size = New System.Drawing.Size(95, 95)
+        Me.PN_NextBrick.TabIndex = 2
+        '
+        'PN_Status
+        '
+        Me.PN_Status.BackColor = System.Drawing.Color.White
+        Me.PN_Status.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PN_Status.Controls.Add(Me.Label6)
+        Me.PN_Status.Controls.Add(Me.Label5)
+        Me.PN_Status.Controls.Add(Me.Label4)
+        Me.PN_Status.Controls.Add(Me.Label3)
+        Me.PN_Status.Controls.Add(Me.Label2)
+        Me.PN_Status.Controls.Add(Me.Label1)
+        Me.PN_Status.Location = New System.Drawing.Point(263, 30)
+        Me.PN_Status.Name = "PN_Status"
+        Me.PN_Status.Size = New System.Drawing.Size(199, 263)
+        Me.PN_Status.TabIndex = 3
         '
         'Label6
         '
@@ -165,99 +248,14 @@ Partial Class GameForm
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "得分"
         '
-        'MI_Start
-        '
-        Me.MI_Start.Name = "MI_Start"
-        Me.MI_Start.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D1), System.Windows.Forms.Keys)
-        Me.MI_Start.Size = New System.Drawing.Size(180, 24)
-        Me.MI_Start.Text = "开始"
-        '
-        'MI_Pause
-        '
-        Me.MI_Pause.Name = "MI_Pause"
-        Me.MI_Pause.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D2), System.Windows.Forms.Keys)
-        Me.MI_Pause.Size = New System.Drawing.Size(180, 24)
-        Me.MI_Pause.Text = "暂停"
-        '
-        'MI_Stop
-        '
-        Me.MI_Stop.Name = "MI_Stop"
-        Me.MI_Stop.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D3), System.Windows.Forms.Keys)
-        Me.MI_Stop.Size = New System.Drawing.Size(180, 24)
-        Me.MI_Stop.Text = "结束"
-        '
-        'MI_Rank
-        '
-        Me.MI_Rank.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.MI_Rank.Name = "MI_Rank"
-        Me.MI_Rank.Size = New System.Drawing.Size(60, 23)
-        Me.MI_Rank.Text = "得分榜"
-        '
-        'MI_Help
-        '
-        Me.MI_Help.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.关于游戏ToolStripMenuItem, Me.操作指南ToolStripMenuItem})
-        Me.MI_Help.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.MI_Help.Name = "MI_Help"
-        Me.MI_Help.Size = New System.Drawing.Size(47, 23)
-        Me.MI_Help.Text = "帮助"
-        '
-        '关于游戏ToolStripMenuItem
-        '
-        Me.关于游戏ToolStripMenuItem.Name = "关于游戏ToolStripMenuItem"
-        Me.关于游戏ToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
-        Me.关于游戏ToolStripMenuItem.Text = "关于游戏"
-        '
-        '操作指南ToolStripMenuItem
-        '
-        Me.操作指南ToolStripMenuItem.Name = "操作指南ToolStripMenuItem"
-        Me.操作指南ToolStripMenuItem.Size = New System.Drawing.Size(180, 24)
-        Me.操作指南ToolStripMenuItem.Text = "操作指南"
-        '
-        'MI_Difficulty
-        '
-        Me.MI_Difficulty.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MI_DiffRookie, Me.MI_DiffJunior, Me.MI_DiffNormal, Me.MI_DiffVeteran, Me.MI_DiffMaster})
-        Me.MI_Difficulty.Name = "MI_Difficulty"
-        Me.MI_Difficulty.Size = New System.Drawing.Size(180, 24)
-        Me.MI_Difficulty.Text = "难度"
-        '
-        'MI_DiffRookie
-        '
-        Me.MI_DiffRookie.Name = "MI_DiffRookie"
-        Me.MI_DiffRookie.Size = New System.Drawing.Size(180, 24)
-        Me.MI_DiffRookie.Text = "菜鸟"
-        '
-        'MI_DiffJunior
-        '
-        Me.MI_DiffJunior.Name = "MI_DiffJunior"
-        Me.MI_DiffJunior.Size = New System.Drawing.Size(180, 24)
-        Me.MI_DiffJunior.Text = "新手"
-        '
-        'MI_DiffNormal
-        '
-        Me.MI_DiffNormal.Name = "MI_DiffNormal"
-        Me.MI_DiffNormal.Size = New System.Drawing.Size(180, 24)
-        Me.MI_DiffNormal.Text = "一般"
-        '
-        'MI_DiffVeteran
-        '
-        Me.MI_DiffVeteran.Name = "MI_DiffVeteran"
-        Me.MI_DiffVeteran.Size = New System.Drawing.Size(180, 24)
-        Me.MI_DiffVeteran.Text = "高手"
-        '
-        'MI_DiffMaster
-        '
-        Me.MI_DiffMaster.Name = "MI_DiffMaster"
-        Me.MI_DiffMaster.Size = New System.Drawing.Size(180, 24)
-        Me.MI_DiffMaster.Text = "大师"
-        '
         'GameForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(504, 449)
-        Me.Controls.Add(Me.Panel3)
-        Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Panel1)
+        Me.ClientSize = New System.Drawing.Size(489, 421)
+        Me.Controls.Add(Me.PN_Status)
+        Me.Controls.Add(Me.PN_NextBrick)
+        Me.Controls.Add(Me.PN_GamePad)
         Me.Controls.Add(Me.MenuBar)
         Me.Font = New System.Drawing.Font("宋体", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -267,18 +265,18 @@ Partial Class GameForm
         Me.Text = "俄罗斯方块"
         Me.MenuBar.ResumeLayout(False)
         Me.MenuBar.PerformLayout()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
+        Me.PN_Status.ResumeLayout(False)
+        Me.PN_Status.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents PN_GamePad As Panel
     Friend WithEvents MenuBar As MenuStrip
     Friend WithEvents MI_Game As ToolStripMenuItem
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents Panel3 As Panel
+    Friend WithEvents PN_NextBrick As Panel
+    Friend WithEvents PN_Status As Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
