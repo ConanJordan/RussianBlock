@@ -8,6 +8,7 @@ Public Class ConstantData
     Public Shared ReadOnly CountVertical As Integer = 20  ' 垂直方向可容纳的方块数
     Public Shared ReadOnly SizeWidth As Integer = 228  ' 游戏面板的宽
     Public Shared ReadOnly SizeHeight As Integer = 380  ' 游戏面板的高
+    Public Shared ReadOnly ColorBackground As Color = Color.Black  ' 背景颜色
     Public Shared ReadOnly ColorGridLine As Color = Color.LightGray  ' 网格线颜色
     Public Shared ReadOnly ColorSquare As Color = Color.LightYellow  ' 正方形砖块颜色
     Public Shared ReadOnly ColorStrait As Color = Color.LightBlue  ' 长条砖块颜色
