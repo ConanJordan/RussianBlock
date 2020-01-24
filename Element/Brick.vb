@@ -4,7 +4,7 @@ Public Class Brick
     Private _alpha As Block
     Private _beta As Block
     Private _gamma As Block
-    Private _delte As Block
+    Private _delta As Block
     Private _color As Color
     Private _graphics As Graphics
     Private _brush As SolidBrush
@@ -33,19 +33,19 @@ Public Class Brick
                 Alpha.Locating.Offset(0, ConstantData.MovingDelta)
                 Beta.Locating.Offset(0, ConstantData.MovingDelta)
                 Gamma.Locating.Offset(0, ConstantData.MovingDelta)
-                Delte.Locating.Offset(0, ConstantData.MovingDelta)
+                delta.Locating.Offset(0, ConstantData.MovingDelta)
             Case ConstantData.Direction.Left  ' 向左移动
                 ' 四个砖块向左移动一个方块的距离
                 Alpha.Locating.Offset(-ConstantData.MovingDelta, 0)
                 Beta.Locating.Offset(-ConstantData.MovingDelta, 0)
                 Gamma.Locating.Offset(-ConstantData.MovingDelta, 0)
-                Delte.Locating.Offset(-ConstantData.MovingDelta, 0)
+                delta.Locating.Offset(-ConstantData.MovingDelta, 0)
             Case ConstantData.Direction.Right  ' 向右移动
                 ' 四个砖块向右移动一个方块的距离
                 Alpha.Locating.Offset(ConstantData.MovingDelta, 0)
                 Beta.Locating.Offset(ConstantData.MovingDelta, 0)
                 Gamma.Locating.Offset(ConstantData.MovingDelta, 0)
-                Delte.Locating.Offset(ConstantData.MovingDelta, 0)
+                delta.Locating.Offset(ConstantData.MovingDelta, 0)
         End Select
     End Sub
 
@@ -63,8 +63,8 @@ Public Class Brick
         If Gamma.Locating.X <= LeftBrick.Locating.X Then
             LeftBrick = Gamma
         End If
-        If Delte.Locating.X <= LeftBrick.Locating.X Then
-            LeftBrick = Delte
+        If delta.Locating.X <= LeftBrick.Locating.X Then
+            LeftBrick = delta
         End If
     End Function
 
@@ -77,8 +77,8 @@ Public Class Brick
         If Gamma.Locating.X >= LeftBrick.Locating.X Then
             RightBrick = Gamma
         End If
-        If Delte.Locating.X >= LeftBrick.Locating.X Then
-            RightBrick = Delte
+        If delta.Locating.X >= LeftBrick.Locating.X Then
+            RightBrick = delta
         End If
     End Function
 
@@ -91,8 +91,8 @@ Public Class Brick
         If Gamma.Locating.Y >= LeftBrick.Locating.Y Then
             BottomBrick = Gamma
         End If
-        If Delte.Locating.Y >= LeftBrick.Locating.Y Then
-            BottomBrick = Delte
+        If delta.Locating.Y >= LeftBrick.Locating.Y Then
+            BottomBrick = delta
         End If
     End Function
 
@@ -123,12 +123,12 @@ Public Class Brick
         End Set
     End Property
 
-    Public Property Delte As Block
+    Public Property Delta As Block
         Get
-            Return _delte
+            Return _delta
         End Get
         Set(value As Block)
-            _delte = value
+            _delta = value
         End Set
     End Property
 
