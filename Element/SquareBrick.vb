@@ -1,5 +1,5 @@
 ﻿' 正方形砖块
-Public NotInheritable Class BrickSquare
+Public NotInheritable Class SquareBrick
     Inherits Brick  ' 继承【Brick】父类
 
     Public Sub New(
