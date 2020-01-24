@@ -21,36 +21,36 @@ Public Class Brick
     End Sub
 
     ' 砖块下沉
-    Public Sub Sink()
+    Public Overridable Sub Sink()
         Move(ConstantData.Direction.Down)
     End Sub
 
     ' 砖块移动
-    Public Sub Move(direction As Integer)
+    Public Overridable Sub Move(direction As Integer)
         Select Case direction
             Case ConstantData.Direction.Down  ' 向下移动
                 ' 四个砖块向下移动一个方块的距离
                 Alpha.Locating.Offset(0, ConstantData.MovingDelta)
                 Beta.Locating.Offset(0, ConstantData.MovingDelta)
                 Gamma.Locating.Offset(0, ConstantData.MovingDelta)
-                delta.Locating.Offset(0, ConstantData.MovingDelta)
+                Delta.Locating.Offset(0, ConstantData.MovingDelta)
             Case ConstantData.Direction.Left  ' 向左移动
                 ' 四个砖块向左移动一个方块的距离
                 Alpha.Locating.Offset(-ConstantData.MovingDelta, 0)
                 Beta.Locating.Offset(-ConstantData.MovingDelta, 0)
                 Gamma.Locating.Offset(-ConstantData.MovingDelta, 0)
-                delta.Locating.Offset(-ConstantData.MovingDelta, 0)
+                Delta.Locating.Offset(-ConstantData.MovingDelta, 0)
             Case ConstantData.Direction.Right  ' 向右移动
                 ' 四个砖块向右移动一个方块的距离
                 Alpha.Locating.Offset(ConstantData.MovingDelta, 0)
                 Beta.Locating.Offset(ConstantData.MovingDelta, 0)
                 Gamma.Locating.Offset(ConstantData.MovingDelta, 0)
-                delta.Locating.Offset(ConstantData.MovingDelta, 0)
+                Delta.Locating.Offset(ConstantData.MovingDelta, 0)
         End Select
     End Sub
 
     ' 砖块旋转（顺时针）
-    Public Sub Whilr()
+    Public Overridable Sub Whirl()
 
     End Sub
 
