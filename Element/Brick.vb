@@ -54,6 +54,48 @@ Public Class Brick
 
     End Sub
 
+    ' 获取最左边的砖块
+    Public Function LeftBrick() As Block
+        LeftBrick = Alpha
+        If Beta.Locating.X <= LeftBrick.Locating.X Then
+            LeftBrick = Beta
+        End If
+        If Gamma.Locating.X <= LeftBrick.Locating.X Then
+            LeftBrick = Gamma
+        End If
+        If Delte.Locating.X <= LeftBrick.Locating.X Then
+            LeftBrick = Delte
+        End If
+    End Function
+
+    ' 获取最右边的砖块
+    Public Function RightBrick() As Block
+        RightBrick = Alpha
+        If Beta.Locating.X >= LeftBrick.Locating.X Then
+            RightBrick = Beta
+        End If
+        If Gamma.Locating.X >= LeftBrick.Locating.X Then
+            RightBrick = Gamma
+        End If
+        If Delte.Locating.X >= LeftBrick.Locating.X Then
+            RightBrick = Delte
+        End If
+    End Function
+
+    ' 获取最下面的砖块
+    Public Function BottomBrick() As Block
+        BottomBrick = Alpha
+        If Beta.Locating.Y >= LeftBrick.Locating.Y Then
+            BottomBrick = Beta
+        End If
+        If Gamma.Locating.Y >= LeftBrick.Locating.Y Then
+            BottomBrick = Gamma
+        End If
+        If Delte.Locating.Y >= LeftBrick.Locating.Y Then
+            BottomBrick = Delte
+        End If
+    End Function
+
     Public Property Alpha As Block
         Get
             Return _alpha

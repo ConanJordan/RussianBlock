@@ -17,10 +17,23 @@ Public NotInheritable Class BrickSquare
 
     End Sub
 
+    ' 砖块下沉
+    Public Overloads Sub Sink()
+        ' 擦除砖块Alpha和Beta
+        Block.DoErase(Graphics, Alpha.Locating)
+        Block.DoErase(Graphics, Beta.Locating)
+
+        MyBase.Sink()  ' 调用父类方法
+
+        ' 绘制砖块Gamma和Delte
+        Gamma.DrawSelf()
+        Delte.DrawSelf()
+
+    End Sub
+
     ' 砖块旋转（顺时针）
     Public Overloads Sub Whilr()
         ' 正方形砖块不需要做旋转操作
     End Sub
-
 
 End Class
