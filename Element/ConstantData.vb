@@ -11,7 +11,7 @@ Public Class ConstantData
     Public Shared ReadOnly ColorBackground As Color = Color.Black  ' 背景颜色
     Public Shared ReadOnly ColorGridLine As Color = Color.LightGray  ' 网格线颜色
     Public Shared ReadOnly ColorSquare As Color = Color.LightYellow  ' 正方形砖块颜色
-    Public Shared ReadOnly ColorStrait As Color = Color.LightBlue  ' 长条砖块颜色
+    Public Shared ReadOnly ColorStraight As Color = Color.LightBlue  ' 长条砖块颜色
     Public Shared ReadOnly ColorShapeL_A As Color = Color.Blue  ' L形(形状A)砖块颜色
     Public Shared ReadOnly ColorShapeL_B As Color = Color.Orange  ' L形(形状B)砖块颜色
     Public Shared ReadOnly ColorShapeS_A As Color = Color.Green  ' S形(形状A)砖块颜色
