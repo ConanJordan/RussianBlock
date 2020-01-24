@@ -1,32 +1,26 @@
 ﻿' 正方形砖块
 Public NotInheritable Class BrickSquare
-    Inherits Brick
-    Implements Movable
+    Inherits Brick  ' 继承【Brick】父类
 
     Public Sub New(
                       paramAlpha As Block,
                       paramColor As Color,
                       paramGraphics As Graphics,
-                      paramBrush As Brush)
+                      paramBrush As SolidBrush)
         MyBase.New(paramAlpha, paramColor, paramGraphics, paramBrush)
         Dim locatingBeta As Point = New Point(Alpha.Locating.X + ConstantData.Delta, Alpha.Locating.Y)
-        Beta = New Block(locatingBeta, Alpha.Color)
+        Beta = New Block(locatingBeta, Alpha.Color, Graphics, Brush)
         Dim locatingGamma As Point = New Point(Alpha.Locating.X, Alpha.Locating.Y + ConstantData.Delta)
-        Gamma = New Block(locatingGamma, Alpha.Color)
+        Gamma = New Block(locatingGamma, Alpha.Color, Graphics, Brush)
         Dim locatingDelte As Point = New Point(Alpha.Locating.X + ConstantData.Delta, Alpha.Locating.Y + ConstantData.Delta)
-        Delte = New Block(locatingDelte, Alpha.Color)
+        Delte = New Block(locatingDelte, Alpha.Color, Graphics, Brush)
 
     End Sub
 
-    Public Sub Sink() Implements Movable.Sink
-        Throw New NotImplementedException()
+    ' 砖块旋转（顺时针）
+    Public Overloads Sub Whilr()
+        ' 正方形砖块不需要做旋转操作
     End Sub
 
-    Public Sub Move(direction As ConstantData.Direction) Implements Movable.Move
-        Throw New NotImplementedException()
-    End Sub
 
-    Public Sub Whilr() Implements Movable.Whilr
-        Throw New NotImplementedException()
-    End Sub
 End Class
