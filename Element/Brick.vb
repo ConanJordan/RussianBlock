@@ -1,6 +1,5 @@
 ﻿' 【砖块】父类
 Public Class Brick
-    Implements Movable
 
     Private _alpha As Block
     Private _beta As Block
@@ -12,16 +11,10 @@ Public Class Brick
 
     Public Sub New(
                   paramAlpha As Block,
-                  paramBeta As Block,
-                  paramGama As Block,
-                  paramDelte As Block,
                   paramColor As Color,
                   paramGraphics As Graphics,
                   paramBrush As Brush)
         Alpha = paramAlpha
-        Beta = paramBeta
-        Gamma = paramGama
-        Delte = paramDelte
         Color = paramColor
         Graphics = paramGraphics
         Brush = paramBrush
@@ -89,21 +82,5 @@ Public Class Brick
             _color = value
         End Set
     End Property
-
-    ' 砖块下沉
-    Public Sub Sink() Implements Movable.Sink
-        Throw New NotImplementedException()
-    End Sub
-
-    ' 砖块移动
-    ' @Param direction : 移动方向
-    Public Sub Move(direction As ConstantData.Direction) Implements Movable.Move
-        Throw New NotImplementedException()
-    End Sub
-
-    ' 砖块旋转（顺时针）
-    Public Sub Whilr() Implements Movable.Whilr
-        Throw New NotImplementedException()
-    End Sub
 
 End Class
