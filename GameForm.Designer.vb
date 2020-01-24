@@ -40,12 +40,12 @@ Partial Class GameForm
         Me.操作指南ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PN_NextBrick = New System.Windows.Forms.Panel()
         Me.PN_Status = New System.Windows.Forms.Panel()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.LB_DiffucultyB = New System.Windows.Forms.Label()
+        Me.LB_TimeB = New System.Windows.Forms.Label()
+        Me.LB_ScoreB = New System.Windows.Forms.Label()
+        Me.LB_DiffcultyA = New System.Windows.Forms.Label()
+        Me.LB_TimeA = New System.Windows.Forms.Label()
+        Me.LB_ScoreA = New System.Windows.Forms.Label()
         Me.MenuBar.SuspendLayout()
         Me.PN_Status.SuspendLayout()
         Me.SuspendLayout()
@@ -81,28 +81,28 @@ Partial Class GameForm
         '
         Me.MI_Start.Name = "MI_Start"
         Me.MI_Start.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D1), System.Windows.Forms.Keys)
-        Me.MI_Start.Size = New System.Drawing.Size(180, 24)
+        Me.MI_Start.Size = New System.Drawing.Size(153, 24)
         Me.MI_Start.Text = "开始"
         '
         'MI_Pause
         '
         Me.MI_Pause.Name = "MI_Pause"
         Me.MI_Pause.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D2), System.Windows.Forms.Keys)
-        Me.MI_Pause.Size = New System.Drawing.Size(180, 24)
+        Me.MI_Pause.Size = New System.Drawing.Size(153, 24)
         Me.MI_Pause.Text = "暂停"
         '
         'MI_Stop
         '
         Me.MI_Stop.Name = "MI_Stop"
         Me.MI_Stop.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D3), System.Windows.Forms.Keys)
-        Me.MI_Stop.Size = New System.Drawing.Size(180, 24)
+        Me.MI_Stop.Size = New System.Drawing.Size(153, 24)
         Me.MI_Stop.Text = "结束"
         '
         'MI_Difficulty
         '
         Me.MI_Difficulty.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MI_DiffRookie, Me.MI_DiffJunior, Me.MI_DiffNormal, Me.MI_DiffVeteran, Me.MI_DiffMaster})
         Me.MI_Difficulty.Name = "MI_Difficulty"
-        Me.MI_Difficulty.Size = New System.Drawing.Size(180, 24)
+        Me.MI_Difficulty.Size = New System.Drawing.Size(153, 24)
         Me.MI_Difficulty.Text = "难度"
         '
         'MI_DiffRookie
@@ -174,79 +174,79 @@ Partial Class GameForm
         '
         Me.PN_Status.BackColor = System.Drawing.Color.White
         Me.PN_Status.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PN_Status.Controls.Add(Me.Label6)
-        Me.PN_Status.Controls.Add(Me.Label5)
-        Me.PN_Status.Controls.Add(Me.Label4)
-        Me.PN_Status.Controls.Add(Me.Label3)
-        Me.PN_Status.Controls.Add(Me.Label2)
-        Me.PN_Status.Controls.Add(Me.Label1)
+        Me.PN_Status.Controls.Add(Me.LB_DiffucultyB)
+        Me.PN_Status.Controls.Add(Me.LB_TimeB)
+        Me.PN_Status.Controls.Add(Me.LB_ScoreB)
+        Me.PN_Status.Controls.Add(Me.LB_DiffcultyA)
+        Me.PN_Status.Controls.Add(Me.LB_TimeA)
+        Me.PN_Status.Controls.Add(Me.LB_ScoreA)
         Me.PN_Status.Location = New System.Drawing.Point(263, 30)
         Me.PN_Status.Name = "PN_Status"
         Me.PN_Status.Size = New System.Drawing.Size(199, 263)
         Me.PN_Status.TabIndex = 3
         '
-        'Label6
+        'LB_DiffucultyB
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.White
-        Me.Label6.Font = New System.Drawing.Font("宋体", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(65, 228)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(58, 24)
-        Me.Label6.TabIndex = 5
-        Me.Label6.Text = "一般"
+        Me.LB_DiffucultyB.AutoSize = True
+        Me.LB_DiffucultyB.BackColor = System.Drawing.Color.White
+        Me.LB_DiffucultyB.Font = New System.Drawing.Font("宋体", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LB_DiffucultyB.Location = New System.Drawing.Point(65, 228)
+        Me.LB_DiffucultyB.Name = "LB_DiffucultyB"
+        Me.LB_DiffucultyB.Size = New System.Drawing.Size(58, 24)
+        Me.LB_DiffucultyB.TabIndex = 5
+        Me.LB_DiffucultyB.Text = "一般"
         '
-        'Label5
+        'LB_TimeB
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.White
-        Me.Label5.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(48, 136)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(106, 24)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "00:00:00"
+        Me.LB_TimeB.AutoSize = True
+        Me.LB_TimeB.BackColor = System.Drawing.Color.White
+        Me.LB_TimeB.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LB_TimeB.Location = New System.Drawing.Point(48, 136)
+        Me.LB_TimeB.Name = "LB_TimeB"
+        Me.LB_TimeB.Size = New System.Drawing.Size(106, 24)
+        Me.LB_TimeB.TabIndex = 4
+        Me.LB_TimeB.Text = "00:00:00"
         '
-        'Label4
+        'LB_ScoreB
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.White
-        Me.Label4.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(82, 43)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(22, 24)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "0"
+        Me.LB_ScoreB.AutoSize = True
+        Me.LB_ScoreB.BackColor = System.Drawing.Color.White
+        Me.LB_ScoreB.Font = New System.Drawing.Font("Consolas", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LB_ScoreB.Location = New System.Drawing.Point(82, 43)
+        Me.LB_ScoreB.Name = "LB_ScoreB"
+        Me.LB_ScoreB.Size = New System.Drawing.Size(22, 24)
+        Me.LB_ScoreB.TabIndex = 3
+        Me.LB_ScoreB.Text = "0"
         '
-        'Label3
+        'LB_DiffcultyA
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("宋体", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Label3.Location = New System.Drawing.Point(18, 188)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(40, 16)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "等级"
+        Me.LB_DiffcultyA.AutoSize = True
+        Me.LB_DiffcultyA.Font = New System.Drawing.Font("宋体", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.LB_DiffcultyA.Location = New System.Drawing.Point(18, 188)
+        Me.LB_DiffcultyA.Name = "LB_DiffcultyA"
+        Me.LB_DiffcultyA.Size = New System.Drawing.Size(40, 16)
+        Me.LB_DiffcultyA.TabIndex = 2
+        Me.LB_DiffcultyA.Text = "难度"
         '
-        'Label2
+        'LB_TimeA
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("宋体", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Label2.Location = New System.Drawing.Point(18, 102)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(40, 16)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "时间"
+        Me.LB_TimeA.AutoSize = True
+        Me.LB_TimeA.Font = New System.Drawing.Font("宋体", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.LB_TimeA.Location = New System.Drawing.Point(18, 102)
+        Me.LB_TimeA.Name = "LB_TimeA"
+        Me.LB_TimeA.Size = New System.Drawing.Size(40, 16)
+        Me.LB_TimeA.TabIndex = 1
+        Me.LB_TimeA.Text = "时间"
         '
-        'Label1
+        'LB_ScoreA
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("宋体", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Label1.Location = New System.Drawing.Point(18, 16)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(40, 16)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "得分"
+        Me.LB_ScoreA.AutoSize = True
+        Me.LB_ScoreA.Font = New System.Drawing.Font("宋体", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.LB_ScoreA.Location = New System.Drawing.Point(18, 16)
+        Me.LB_ScoreA.Name = "LB_ScoreA"
+        Me.LB_ScoreA.Size = New System.Drawing.Size(40, 16)
+        Me.LB_ScoreA.TabIndex = 0
+        Me.LB_ScoreA.Text = "得分"
         '
         'GameForm
         '
@@ -277,12 +277,12 @@ Partial Class GameForm
     Friend WithEvents MI_Game As ToolStripMenuItem
     Friend WithEvents PN_NextBrick As Panel
     Friend WithEvents PN_Status As Panel
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
+    Friend WithEvents LB_TimeA As Label
+    Friend WithEvents LB_ScoreA As Label
+    Friend WithEvents LB_DiffcultyA As Label
+    Friend WithEvents LB_ScoreB As Label
+    Friend WithEvents LB_TimeB As Label
+    Friend WithEvents LB_DiffucultyB As Label
     Friend WithEvents MI_Start As ToolStripMenuItem
     Friend WithEvents MI_Pause As ToolStripMenuItem
     Friend WithEvents MI_Stop As ToolStripMenuItem
