@@ -16,7 +16,7 @@ Public Class ConstantData
     Public Shared ReadOnly ColorShapeLB As Color = Color.Orange  ' L形(形状B)砖块颜色
     Public Shared ReadOnly ColorShapeSA As Color = Color.Green  ' S形(形状A)砖块颜色
     Public Shared ReadOnly ColorShapeSB As Color = Color.Red  ' S形(形状B)砖块颜色
-    Public Shared ReadOnly ColorBasement As Color = Color.Violet  ' 堡垒形砖块颜色
+    Public Shared ReadOnly ColorFort As Color = Color.Violet  ' 堡垒形砖块颜色
 
     Public Enum Direction As Integer  ' 方向
         Stilless = 0  ' 静止
