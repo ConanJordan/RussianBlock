@@ -37,24 +37,36 @@ Public NotInheritable Class StraightBrick
 
     ' 砖块移动
     Public Overrides Sub Move(direction As Integer)
-        If direction = ConstantData.Direction.Left Then  ' 向左移动
-            ' 擦除最右边砖块
-            Block.DoErase(Graphics, RightBrick().Locating)
-
+        ' 判断砖块是水平还是垂直状态
+        If Alpha.Locating.X = Beta.Locating.X = Gamma.Locating.X = Delta.Locating.X Then  ' 垂直状态
+            ' 擦除所有砖块
+            Block.DoErase(Graphics, Alpha.Locating)
+            Block.DoErase(Graphics, Beta.Locating)
+            Block.DoErase(Graphics, Gamma.Locating)
+            Block.DoErase(Graphics, Delta.Locating)
             MyBase.Move(direction)  ' 调用父类方法
-
-            ' 绘制最左边砖块
-            LeftBrick().DrawSelf()
+            ' 绘制新的砖块
+            Alpha.DrawSelf()
+            Beta.DrawSelf()
+            Gamma.DrawSelf()
+            Delta.DrawSelf()
+        Else  ' 水平状态
+            If direction = ConstantData.Direction.Left Then  ' 向左移动
+                ' 擦除最右边砖块
+                Block.DoErase(Graphics, RightBrick().Locating)
+                MyBase.Move(direction)  ' 调用父类方法
+                ' 绘制最左边砖块
+                LeftBrick().DrawSelf()
+            End If
+            If direction = ConstantData.Direction.Right Then  ' 向右移动
+                ' 擦除最左边砖块
+                Block.DoErase(Graphics, LeftBrick().Locating)
+                MyBase.Move(direction)  ' 调用父类方法
+                ' 绘制最右边砖块
+                RightBrick().DrawSelf()
+            End If
         End If
-        If direction = ConstantData.Direction.Right Then  ' 向右移动
-            ' 擦除最左边砖块
-            Block.DoErase(Graphics, LeftBrick().Locating)
 
-            MyBase.Move(direction)  ' 调用父类方法
-
-            ' 绘制最右边砖块
-            RightBrick().DrawSelf()
-        End If
     End Sub
 
     ' 砖块旋转（顺时针）
