@@ -132,9 +132,7 @@ Public Class Brick
             End If
         Next
 
-        If IsMovable = False Then  ' 如果不能移动
-            Move(-direction)  ' 向反方向移动回去
-        End If
+        Move(-direction)  ' 向反方向移动回去
     End Function
 
     ' 判断是否会撞到左右两侧墙壁
@@ -142,26 +140,11 @@ Public Class Brick
         IsKnocking = False  ' 默认情况下不会撞到墙壁
         Move(direction)  ' 移动砖块
 
-        If Alpha.Locating.X < 0 OrElse Alpha.Locating.X > ConstantData.SizeWidth Then
+        If LeftBrick().Locating.X < 0 OrElse RightBrick().Locating.X > ConstantData.SizeWidth Then
+            ' 最左边的砖块在左侧墙壁左侧，或者最右边的砖块在右侧墙壁右侧，说明砖块碰撞到墙壁了。
             IsKnocking = True
-            Move(-direction)  ' 向反方向移动回去
-            Exit Function  ' 结束函数
         End If
-        If Beta.Locating.X < 0 OrElse Beta.Locating.X > ConstantData.SizeWidth Then
-            IsKnocking = True
-            Move(-direction)  ' 向反方向移动回去
-            Exit Function  ' 结束函数
-        End If
-        If Gamma.Locating.X < 0 OrElse Gamma.Locating.X > ConstantData.SizeWidth Then
-            IsKnocking = True
-            Move(-direction)  ' 向反方向移动回去
-            Exit Function  ' 结束函数
-        End If
-        If Delta.Locating.X < 0 OrElse Delta.Locating.X > ConstantData.SizeWidth Then
-            IsKnocking = True
-            Move(-direction)  ' 向反方向移动回去
-            Exit Function  ' 结束函数
-        End If
+        Move(-direction)  ' 向反方向移动回去
     End Function
 
     Public Property Alpha As Block
