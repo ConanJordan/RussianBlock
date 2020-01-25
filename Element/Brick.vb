@@ -147,6 +147,17 @@ Public Class Brick
         Move(-direction)  ' 向反方向移动回去
     End Function
 
+    ' 判断是否下沉到游戏面板的底端
+    Public Function IsReachingBottom(direction As Integer)
+        IsReachingBottom = False  ' 默认情况下没有下沉到底端
+        Move(direction)  ' 移动砖块
+        If BottomBrick.Locating.Y > ConstantData.SizeHeight Then
+            ' 最下面的砖块超过了游戏面板的底端，说明已经下沉到底端了。
+            IsReachingBottom = True
+        End If
+        Move(-direction)  ' 向反方向移动回去
+    End Function
+
     Public Property Alpha As Block
         Get
             Return _alpha
