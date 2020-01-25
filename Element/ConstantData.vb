@@ -12,16 +12,23 @@ Public Class ConstantData
     Public Shared ReadOnly ColorGridLine As Color = Color.LightGray  ' 网格线颜色
     Public Shared ReadOnly ColorSquare As Color = Color.LightYellow  ' 正方形砖块颜色
     Public Shared ReadOnly ColorStraight As Color = Color.LightBlue  ' 长条砖块颜色
-    Public Shared ReadOnly ColorShapeL_A As Color = Color.Blue  ' L形(形状A)砖块颜色
-    Public Shared ReadOnly ColorShapeL_B As Color = Color.Orange  ' L形(形状B)砖块颜色
-    Public Shared ReadOnly ColorShapeS_A As Color = Color.Green  ' S形(形状A)砖块颜色
-    Public Shared ReadOnly ColorShapeS_B As Color = Color.Red  ' S形(形状B)砖块颜色
+    Public Shared ReadOnly ColorShapeLA As Color = Color.Blue  ' L形(形状A)砖块颜色
+    Public Shared ReadOnly ColorShapeLB As Color = Color.Orange  ' L形(形状B)砖块颜色
+    Public Shared ReadOnly ColorShapeSA As Color = Color.Green  ' S形(形状A)砖块颜色
+    Public Shared ReadOnly ColorShapeSB As Color = Color.Red  ' S形(形状B)砖块颜色
     Public Shared ReadOnly ColorBasement As Color = Color.Violet  ' 堡垒形砖块颜色
 
     Public Enum Direction As Integer  ' 方向
         Left = 1  ' 向左
         Right = 2  ' 向右
         Down = 3  ' 向下
+    End Enum
+
+    Public Enum GameStatus As Integer  ' 游戏状态
+        OK = 1  ' 游戏可开始
+        Running = 2  ' 游戏运行中
+        Pausing = 3  ' 游戏暂停中
+        Stoped = 4  ' 游戏结束
     End Enum
 
 End Class
