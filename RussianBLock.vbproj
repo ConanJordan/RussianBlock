@@ -86,7 +86,6 @@
     <Compile Include="Element\GameConsole.vb" />
     <Compile Include="Element\SquareBrick.vb" />
     <Compile Include="Element\ConstantData.vb" />
-    <Compile Include="Element\Movable.vb" />
     <Compile Include="Element\StraightBrick.vb" />
     <Compile Include="GameForm.vb">
       <SubType>Form</SubType>
