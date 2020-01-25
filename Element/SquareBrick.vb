@@ -58,7 +58,7 @@ Public NotInheritable Class SquareBrick
     End Sub
 
     ' 砖块旋转（顺时针）
-    Public Overloads Sub Whilr()
+    Public Overrides Sub Whirl()
         ' 正方形砖块不需要做旋转操作
     End Sub
 

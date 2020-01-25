@@ -61,6 +61,12 @@ Public Class Brick
         ' 旋转方式请参考【游戏设计.xlsx】。
     End Sub
 
+    ' 判断是否能旋转（顺时针）
+    Public Overridable Function IsWhirlable() As Boolean
+        ' 判断每种砖块是否能旋转的方式不同，所以需要重写该方法。
+        IsWhirlable = True
+    End Function
+
     ' 获取最左边的砖块
     Public Function LeftBrick() As Block
         LeftBrick = Alpha
