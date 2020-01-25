@@ -8,6 +8,8 @@ Public Class GameConsole
     Private _runningTime As TimeSpan  ' 游戏运行时间
     Private _pauseTime As TimeSpan  ' 游戏暂停时间
     Private _nodeTime As Date  ' 游戏节点时刻（开始，暂停）
+    Private _currentBrick As Brick  ' 当前砖块
+    Private _nextBrick As Brick  ' 下一个砖块
 
     ' 构造函数
 
@@ -108,5 +110,23 @@ Public Class GameConsole
     End Property
 
     Public Property BlockList As New ArrayList()  ' 游戏面板的方块状态信息的集合
+
+    Public Property CurrentBrick As Brick
+        Get
+            Return _currentBrick
+        End Get
+        Set(value As Brick)
+            _currentBrick = value
+        End Set
+    End Property
+
+    Public Property NextBrick As Brick
+        Get
+            Return _nextBrick
+        End Get
+        Set(value As Brick)
+            _nextBrick = value
+        End Set
+    End Property
 End Class
 
