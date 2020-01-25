@@ -34,6 +34,12 @@ Public Class Brick
                 Beta.Locating.Offset(0, ConstantData.MovingDelta)
                 Gamma.Locating.Offset(0, ConstantData.MovingDelta)
                 Delta.Locating.Offset(0, ConstantData.MovingDelta)
+            Case ConstantData.Direction.Up  ' 向上移动
+                ' 四个砖块向上移动一个方块的距离
+                Alpha.Locating.Offset(0, -ConstantData.MovingDelta)
+                Beta.Locating.Offset(0, -ConstantData.MovingDelta)
+                Gamma.Locating.Offset(0, -ConstantData.MovingDelta)
+                Delta.Locating.Offset(0, -ConstantData.MovingDelta)
             Case ConstantData.Direction.Left  ' 向左移动
                 ' 四个砖块向左移动一个方块的距离
                 Alpha.Locating.Offset(-ConstantData.MovingDelta, 0)
@@ -93,6 +99,68 @@ Public Class Brick
         End If
         If delta.Locating.Y >= LeftBrick.Locating.Y Then
             BottomBrick = delta
+        End If
+    End Function
+
+    ' 判断是否可以移动
+    Public Function IsMovable(direction As Integer, blockList As ArrayList) As Boolean
+        IsMovable = True  ' 默认情况下可以移动
+
+        If IsKnocking(direction) Then  ' 如果会撞到两侧墙壁
+            IsMovable = False
+            Exit Function  ' 结束函数
+        End If
+
+        Move(direction)  '移动砖块
+
+        For Each blockStatus As BlockStatus In blockList
+            If blockStatus.Locating.Equals(Alpha.Locating) Then
+                IsMovable = False
+                Exit For
+            End If
+            If blockStatus.Locating.Equals(Beta.Locating) Then
+                IsMovable = False
+                Exit For
+            End If
+            If blockStatus.Locating.Equals(Gamma.Locating) Then
+                IsMovable = False
+                Exit For
+            End If
+            If blockStatus.Locating.Equals(Delta.Locating) Then
+                IsMovable = False
+                Exit For
+            End If
+        Next
+
+        If IsMovable = False Then  ' 如果不能移动
+            Move(-direction)  ' 向反方向移动回去
+        End If
+    End Function
+
+    ' 判断是否会撞到左右两侧墙壁
+    Public Function IsKnocking(direction As Integer) As Boolean
+        IsKnocking = False  ' 默认情况下不会撞到墙壁
+        Move(direction)  ' 移动砖块
+
+        If Alpha.Locating.X < 0 OrElse Alpha.Locating.X > ConstantData.SizeWidth Then
+            IsKnocking = True
+            Move(-direction)  ' 向反方向移动回去
+            Exit Function  ' 结束函数
+        End If
+        If Beta.Locating.X < 0 OrElse Beta.Locating.X > ConstantData.SizeWidth Then
+            IsKnocking = True
+            Move(-direction)  ' 向反方向移动回去
+            Exit Function  ' 结束函数
+        End If
+        If Gamma.Locating.X < 0 OrElse Gamma.Locating.X > ConstantData.SizeWidth Then
+            IsKnocking = True
+            Move(-direction)  ' 向反方向移动回去
+            Exit Function  ' 结束函数
+        End If
+        If Delta.Locating.X < 0 OrElse Delta.Locating.X > ConstantData.SizeWidth Then
+            IsKnocking = True
+            Move(-direction)  ' 向反方向移动回去
+            Exit Function  ' 结束函数
         End If
     End Function
 

@@ -83,7 +83,7 @@
     <Compile Include="Element\Block.vb" />
     <Compile Include="Element\Brick.vb" />
     <Compile Include="Element\BlockStatus.vb" />
-    <Compile Include="Element\GamePad.vb" />
+    <Compile Include="Element\GameConsole.vb" />
     <Compile Include="Element\SquareBrick.vb" />
     <Compile Include="Element\ConstantData.vb" />
     <Compile Include="Element\Movable.vb" />
@@ -123,6 +123,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include=".editorconfig" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

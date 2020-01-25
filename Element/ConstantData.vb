@@ -20,8 +20,10 @@ Public Class ConstantData
 
     Public Enum Direction As Integer  ' 方向
         Left = 1  ' 向左
-        Right = 2  ' 向右
-        Down = 3  ' 向下
+        Right = -1  ' 向右
+        Down = 2  ' 向下
+        Up = -2  ' 向上
+        ' 上下，左右的数值正好互为相反数
     End Enum
 
     Public Enum GameStatus As Integer  ' 游戏状态
