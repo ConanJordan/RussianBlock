@@ -57,7 +57,7 @@ Public Class Brick
     End Sub
 
     ' 砖块旋转（顺时针）
-    Public Overridable Sub Whirl()
+    Public Overridable Sub Whirl(blockList As ArrayList)
         ' 每种砖块的旋转方式不同，所以需要重写该方法。
         ' 旋转方式请参考【游戏设计.xlsx】。
     End Sub
