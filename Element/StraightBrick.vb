@@ -128,10 +128,4 @@ Public NotInheritable Class StraightBrick
         End If
     End Sub
 
-    ' 判断是否能旋转（顺时针）
-    Public Overrides Function IsWhirlable() As Boolean
-
-        IsWhirlable = True
-    End Function
-
 End Class
