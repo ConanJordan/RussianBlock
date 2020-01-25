@@ -130,7 +130,7 @@ Public NotInheritable Class StraightBrick
             Exit Sub
         End If
 
-        ' 形态C→形态D
+        ' 形态D→形态A
         If (Alpha.Locating.X = Beta.Locating.X = Gamma.Locating.X = Delta.Locating.X) AndAlso BottomBrick() Is Alpha Then
             Alpha.Locating.Offset(-ConstantData.MovingDelta, -ConstantData.MovingDelta * 2)
             Beta.Locating.Offset(0, -ConstantData.MovingDelta)
