@@ -28,6 +28,7 @@ Public Class Brick
     ' 砖块移动
     Public Overridable Sub Move(direction As Integer)
         Select Case direction
+            Case ConstantData.Direction.Stilless  ' 静止
             Case ConstantData.Direction.Down  ' 向下移动
                 ' 四个砖块向下移动一个方块的距离
                 Alpha.Locating.Offset(0, ConstantData.MovingDelta)
@@ -106,6 +107,20 @@ Public Class Brick
         End If
         If delta.Locating.Y >= LeftBrick.Locating.Y Then
             BottomBrick = delta
+        End If
+    End Function
+
+    ' 获取最上面的砖块
+    Public Function TopBrick() As Block
+        TopBrick = Alpha
+        If Beta.Locating.Y <= LeftBrick.Locating.Y Then
+            TopBrick = Beta
+        End If
+        If Gamma.Locating.Y <= LeftBrick.Locating.Y Then
+            TopBrick = Gamma
+        End If
+        If Delta.Locating.Y <= LeftBrick.Locating.Y Then
+            TopBrick = Delta
         End If
     End Function
 

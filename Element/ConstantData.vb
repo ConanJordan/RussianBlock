@@ -19,6 +19,7 @@ Public Class ConstantData
     Public Shared ReadOnly ColorBasement As Color = Color.Violet  ' 堡垒形砖块颜色
 
     Public Enum Direction As Integer  ' 方向
+        Stilless = 0  ' 静止
         Left = 1  ' 向左
         Right = -1  ' 向右
         Down = 2  ' 向下
