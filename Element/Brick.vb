@@ -9,6 +9,7 @@ Public Class Brick
     Private _graphics As Graphics
     Private _brush As SolidBrush
 
+    ' 构造函数
     Public Sub New(
                   paramAlpha As Block,
                   paramColor As Color,
