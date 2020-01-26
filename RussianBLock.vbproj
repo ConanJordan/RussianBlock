@@ -85,6 +85,7 @@
     <Compile Include="Element\Brick.vb" />
     <Compile Include="Element\BlockStatus.vb" />
     <Compile Include="Element\GameConsole.vb" />
+    <Compile Include="Element\NextBrickLocating.vb" />
     <Compile Include="Element\ShapeLABrick.vb" />
     <Compile Include="Element\ShapeSABrick.vb" />
     <Compile Include="Element\ShapeSBBrick.vb" />

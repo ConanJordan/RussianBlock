@@ -1,5 +1,5 @@
 ﻿' 记录常量的数据类
-Public Class ConstantData
+Public NotInheritable Class ConstantData
     Public Shared ReadOnly LengthOutside As Integer = 19  ' 外边长
     Public Shared ReadOnly LengthInside As Integer = 17  ' 内边长
     Public Shared ReadOnly Delta As Integer = 19  ' 偏移量
@@ -8,6 +8,8 @@ Public Class ConstantData
     Public Shared ReadOnly CountVertical As Integer = 20  ' 垂直方向可容纳的方块数
     Public Shared ReadOnly SizeWidth As Integer = 228  ' 游戏面板的宽
     Public Shared ReadOnly SizeHeight As Integer = 380  ' 游戏面板的高
+    Public Shared ReadOnly SizeWidthNext As Integer = 100  ' 下一个砖块面板的宽
+    Public Shared ReadOnly SizeHeightNext As Integer = 100  ' 下一个砖块面板的高
     Public Shared ReadOnly ColorBackground As Color = Color.Black  ' 背景颜色
     Public Shared ReadOnly ColorGridLine As Color = Color.LightGray  ' 网格线颜色
     Public Shared ReadOnly ColorSquare As Color = Color.LightYellow  ' 正方形砖块颜色
