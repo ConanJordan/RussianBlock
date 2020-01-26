@@ -31,7 +31,7 @@ Public NotInheritable Class NextBrickLocating
         x = ConstantData.SizeWidthNext / 2
         y = ConstantData.SizeHeightNext / 2
         x = x - ConstantData.Delta
-        y = y + 9
+        y = y + 10
         Return New Point(x - 1, y - 1)
     End Function
 
@@ -58,7 +58,7 @@ Public NotInheritable Class NextBrickLocating
         x = ConstantData.SizeWidthNext / 2
         y = ConstantData.SizeHeightNext / 2
         x = x - ConstantData.Delta
-        y = y + 9
+        y = y + 10
         Return New Point(x - 1, y - 1)
     End Function
 

@@ -18,7 +18,7 @@ Public Class GameConsole
     End Sub
 
     ' 初始化：游戏主机
-    Private Sub InitConsole()
+    Public Sub InitConsole()
         GamePadGraphics = GameForm.PN_GamePad.CreateGraphics  ' 游戏面板画刷
         NextBrickGraphics = GameForm.PN_NextBrick.CreateGraphics  ' 下一个砖块画刷
         Score = 0  ' 游戏得分
@@ -27,7 +27,11 @@ Public Class GameConsole
     End Sub
 
     ' 初始化：游戏面板的方块状态信息的集合
-    Private Sub InitBlockList()
+    Public Sub InitBlockList()
+        If BlockList.Count <> 0 Then  ' 集合里有元素时
+            BlockList.Clear()  ' 清空集合
+        End If
+
         Dim locating As Point
         For row As Integer = 1 To ConstantData.CountVertical  ' 行
             For collumn As Integer = 1 To ConstantData.CountHorizon  ' 列
@@ -38,7 +42,7 @@ Public Class GameConsole
     End Sub
 
     ' 生成下一个砖块
-    Private Sub CreateNextBrick()
+    Public Sub CreateNextBrick()
         Dim locating As Point  ' 定位像素点
         Dim type As Integer  ' 砖块类别
         Dim ran As New Random()  ' 随机数实例化对象
@@ -51,38 +55,38 @@ Public Class GameConsole
             Case ConstantData.BrickType.Square
                 locating = NextBrickLocating.Square
                 brush = New SolidBrush(ConstantData.ColorSquare)
-                alpha = New Block(locating, ConstantData.ColorSquare, GamePadGraphics, brush)
-                Me.NextBrick = New SquareBrick(alpha, ConstantData.ColorSquare, Me.NextBrickGraphics, Nothing)
+                alpha = New Block(locating, ConstantData.ColorSquare, NextBrickGraphics, brush)
+                Me.NextBrick = New SquareBrick(alpha, ConstantData.ColorSquare, NextBrickGraphics, alpha.Brush)
             Case ConstantData.BrickType.Straight
                 locating = NextBrickLocating.Straight
                 brush = New SolidBrush(ConstantData.ColorStraight)
-                alpha = New Block(locating, ConstantData.ColorStraight, GamePadGraphics, brush)
-                Me.NextBrick = New SquareBrick(alpha, ConstantData.ColorStraight, Me.NextBrickGraphics, Nothing)
+                alpha = New Block(locating, ConstantData.ColorStraight, NextBrickGraphics, brush)
+                Me.NextBrick = New StraightBrick(alpha, ConstantData.ColorStraight, NextBrickGraphics, alpha.Brush)
             Case ConstantData.BrickType.ShapeLA
                 locating = NextBrickLocating.ShapeLA
                 brush = New SolidBrush(ConstantData.ColorShapeLA)
-                alpha = New Block(locating, ConstantData.ColorShapeLA, GamePadGraphics, brush)
-                Me.NextBrick = New SquareBrick(alpha, ConstantData.ColorShapeLA, Me.NextBrickGraphics, Nothing)
+                alpha = New Block(locating, ConstantData.ColorShapeLA, NextBrickGraphics, brush)
+                Me.NextBrick = New ShapeLABrick(alpha, ConstantData.ColorShapeLA, NextBrickGraphics, alpha.Brush)
             Case ConstantData.BrickType.ShapeLB
                 locating = NextBrickLocating.ShapeLB
                 brush = New SolidBrush(ConstantData.ColorShapeLB)
-                alpha = New Block(locating, ConstantData.ColorShapeLB, GamePadGraphics, brush)
-                Me.NextBrick = New SquareBrick(alpha, ConstantData.ColorShapeLB, Me.NextBrickGraphics, Nothing)
+                alpha = New Block(locating, ConstantData.ColorShapeLB, NextBrickGraphics, brush)
+                Me.NextBrick = New ShapeLBBrick(alpha, ConstantData.ColorShapeLB, NextBrickGraphics, alpha.Brush)
             Case ConstantData.BrickType.ShapeSA
                 locating = NextBrickLocating.ShapeSA
                 brush = New SolidBrush(ConstantData.ColorShapeSA)
-                alpha = New Block(locating, ConstantData.ColorShapeSA, GamePadGraphics, brush)
-                Me.NextBrick = New SquareBrick(alpha, ConstantData.ColorShapeSA, Me.NextBrickGraphics, Nothing)
+                alpha = New Block(locating, ConstantData.ColorShapeSA, NextBrickGraphics, brush)
+                Me.NextBrick = New ShapeSABrick(alpha, ConstantData.ColorShapeSA, NextBrickGraphics, alpha.Brush)
             Case ConstantData.BrickType.ShapeSB
                 locating = NextBrickLocating.ShapeSB
                 brush = New SolidBrush(ConstantData.ColorShapeSB)
-                alpha = New Block(locating, ConstantData.ColorShapeSB, GamePadGraphics, brush)
-                Me.NextBrick = New SquareBrick(alpha, ConstantData.ColorShapeSB, Me.NextBrickGraphics, Nothing)
+                alpha = New Block(locating, ConstantData.ColorShapeSB, NextBrickGraphics, brush)
+                Me.NextBrick = New ShapeSBBrick(alpha, ConstantData.ColorShapeSB, NextBrickGraphics, alpha.Brush)
             Case ConstantData.BrickType.Fort
                 locating = NextBrickLocating.Fort
                 brush = New SolidBrush(ConstantData.ColorFort)
-                alpha = New Block(locating, ConstantData.ColorFort, GamePadGraphics, brush)
-                Me.NextBrick = New SquareBrick(alpha, ConstantData.ColorFort, Me.NextBrickGraphics, Nothing)
+                alpha = New Block(locating, ConstantData.ColorFort, NextBrickGraphics, brush)
+                Me.NextBrick = New FortBrick(alpha, ConstantData.ColorFort, NextBrickGraphics, alpha.Brush)
         End Select
         Me.NextBrick.DrawSelf()
     End Sub

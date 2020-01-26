@@ -1,6 +1,7 @@
 ﻿Public Class GameForm
     Private _gamePadGraphics As Graphics  ' 画板：游戏面板
     Private _nextBrickGraphics As Graphics  ' 画板：下一个砖块
+    Private _console As GameConsole  ' 游戏主机
 
     Private Sub GameForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -33,6 +34,12 @@
     ' 开始
     Private Sub MI_Start_Click(sender As Object, e As EventArgs) Handles MI_Start.Click
         InitializeGrid()  ' 初始化游戏面板的网格线
+        Console = New GameConsole(Me)  ' 新建游戏主机实例化对象
+
+        Console.InitConsole()  ' 初始化：游戏主机
+        Console.InitBlockList()  ' 游戏面板的方块状态信息的集合
+        Console.CreateNextBrick()  ' 生成下一个砖块
+
     End Sub
 
     Public Property GamePadGraphics As Graphics
@@ -50,6 +57,15 @@
         End Get
         Set(value As Graphics)
             _nextBrickGraphics = value
+        End Set
+    End Property
+
+    Public Property Console As GameConsole
+        Get
+            Return _console
+        End Get
+        Set(value As GameConsole)
+            _console = value
         End Set
     End Property
 
