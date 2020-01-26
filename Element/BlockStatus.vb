@@ -2,6 +2,7 @@
 Public Class BlockStatus
     Private _locating As Point  ' 定位像素点
     Private _occupied As Boolean  ' 方块是否被占据
+    Private _color As Color = Nothing  ' 方块被占据时的颜色
 
     ' 构造函数
     Public Sub New(locating As Point, occupied As Boolean)
@@ -24,6 +25,15 @@ Public Class BlockStatus
         End Get
         Set(value As Boolean)
             _occupied = value
+        End Set
+    End Property
+
+    Public Property Color As Color
+        Get
+            Return _color
+        End Get
+        Set(value As Color)
+            _color = value
         End Set
     End Property
 End Class

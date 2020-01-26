@@ -53,4 +53,8 @@
         End Set
     End Property
 
+    ' 计时器
+    Private Sub TI_Game_Tick(sender As Object, e As EventArgs) Handles TI_Game.Tick
+
+    End Sub
 End Class

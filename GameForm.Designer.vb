@@ -22,6 +22,7 @@ Partial Class GameForm
     'コード エディターを使って変更しないでください。
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.PN_GamePad = New System.Windows.Forms.Panel()
         Me.MenuBar = New System.Windows.Forms.MenuStrip()
         Me.MI_Game = New System.Windows.Forms.ToolStripMenuItem()
@@ -46,6 +47,7 @@ Partial Class GameForm
         Me.LB_DiffcultyA = New System.Windows.Forms.Label()
         Me.LB_TimeA = New System.Windows.Forms.Label()
         Me.LB_ScoreA = New System.Windows.Forms.Label()
+        Me.TI_Game = New System.Windows.Forms.Timer(Me.components)
         Me.MenuBar.SuspendLayout()
         Me.PN_Status.SuspendLayout()
         Me.SuspendLayout()
@@ -248,6 +250,10 @@ Partial Class GameForm
         Me.LB_ScoreA.TabIndex = 0
         Me.LB_ScoreA.Text = "得分"
         '
+        'TI_Game
+        '
+        Me.TI_Game.Interval = 500
+        '
         'GameForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
@@ -296,4 +302,5 @@ Partial Class GameForm
     Friend WithEvents MI_DiffNormal As ToolStripMenuItem
     Friend WithEvents MI_DiffVeteran As ToolStripMenuItem
     Friend WithEvents MI_DiffMaster As ToolStripMenuItem
+    Friend WithEvents TI_Game As Timer
 End Class
