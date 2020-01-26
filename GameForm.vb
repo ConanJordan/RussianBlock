@@ -57,4 +57,9 @@
     Private Sub TI_Game_Tick(sender As Object, e As EventArgs) Handles TI_Game.Tick
 
     End Sub
+
+    ' 关于游戏
+    Private Sub MI_AboutGame_Click(sender As Object, e As EventArgs) Handles MI_AboutGame.Click
+        MessageBox.Show("使用VB编写的俄罗斯方块。" & vbCrLf & "@Author 李舟", "俄罗斯方块")
+    End Sub
 End Class

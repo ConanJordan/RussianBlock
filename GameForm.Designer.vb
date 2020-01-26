@@ -37,8 +37,8 @@ Partial Class GameForm
         Me.MI_DiffMaster = New System.Windows.Forms.ToolStripMenuItem()
         Me.MI_Rank = New System.Windows.Forms.ToolStripMenuItem()
         Me.MI_Help = New System.Windows.Forms.ToolStripMenuItem()
-        Me.关于游戏ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.操作指南ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MI_AboutGame = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MI_OperateGuide = New System.Windows.Forms.ToolStripMenuItem()
         Me.PN_NextBrick = New System.Windows.Forms.Panel()
         Me.PN_Status = New System.Windows.Forms.Panel()
         Me.LB_DiffucultyB = New System.Windows.Forms.Label()
@@ -146,23 +146,23 @@ Partial Class GameForm
         '
         'MI_Help
         '
-        Me.MI_Help.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.关于游戏ToolStripMenuItem, Me.操作指南ToolStripMenuItem})
+        Me.MI_Help.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MI_AboutGame, Me.MI_OperateGuide})
         Me.MI_Help.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.MI_Help.Name = "MI_Help"
         Me.MI_Help.Size = New System.Drawing.Size(47, 23)
         Me.MI_Help.Text = "帮助"
         '
-        '关于游戏ToolStripMenuItem
+        'MI_AboutGame
         '
-        Me.关于游戏ToolStripMenuItem.Name = "关于游戏ToolStripMenuItem"
-        Me.关于游戏ToolStripMenuItem.Size = New System.Drawing.Size(130, 24)
-        Me.关于游戏ToolStripMenuItem.Text = "关于游戏"
+        Me.MI_AboutGame.Name = "MI_AboutGame"
+        Me.MI_AboutGame.Size = New System.Drawing.Size(180, 24)
+        Me.MI_AboutGame.Text = "关于游戏"
         '
-        '操作指南ToolStripMenuItem
+        'MI_OperateGuide
         '
-        Me.操作指南ToolStripMenuItem.Name = "操作指南ToolStripMenuItem"
-        Me.操作指南ToolStripMenuItem.Size = New System.Drawing.Size(130, 24)
-        Me.操作指南ToolStripMenuItem.Text = "操作指南"
+        Me.MI_OperateGuide.Name = "MI_OperateGuide"
+        Me.MI_OperateGuide.Size = New System.Drawing.Size(180, 24)
+        Me.MI_OperateGuide.Text = "操作指南"
         '
         'PN_NextBrick
         '
@@ -294,8 +294,8 @@ Partial Class GameForm
     Friend WithEvents MI_Stop As ToolStripMenuItem
     Friend WithEvents MI_Rank As ToolStripMenuItem
     Friend WithEvents MI_Help As ToolStripMenuItem
-    Friend WithEvents 关于游戏ToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents 操作指南ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MI_AboutGame As ToolStripMenuItem
+    Friend WithEvents MI_OperateGuide As ToolStripMenuItem
     Friend WithEvents MI_Difficulty As ToolStripMenuItem
     Friend WithEvents MI_DiffRookie As ToolStripMenuItem
     Friend WithEvents MI_DiffJunior As ToolStripMenuItem
