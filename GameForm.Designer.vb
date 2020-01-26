@@ -167,9 +167,9 @@ Partial Class GameForm
         'PN_NextBrick
         '
         Me.PN_NextBrick.BackColor = System.Drawing.Color.Black
-        Me.PN_NextBrick.Location = New System.Drawing.Point(317, 313)
+        Me.PN_NextBrick.Location = New System.Drawing.Point(317, 308)
         Me.PN_NextBrick.Name = "PN_NextBrick"
-        Me.PN_NextBrick.Size = New System.Drawing.Size(95, 95)
+        Me.PN_NextBrick.Size = New System.Drawing.Size(100, 100)
         Me.PN_NextBrick.TabIndex = 2
         '
         'PN_Status

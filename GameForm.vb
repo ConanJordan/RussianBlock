@@ -32,7 +32,7 @@
 
     ' 开始
     Private Sub MI_Start_Click(sender As Object, e As EventArgs) Handles MI_Start.Click
-        InitializeGrid()
+        InitializeGrid()  ' 初始化游戏面板的网格线
     End Sub
 
     Public Property GamePadGraphics As Graphics
