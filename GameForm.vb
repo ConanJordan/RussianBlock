@@ -38,7 +38,8 @@
 
         Console.InitConsole()  ' 初始化：游戏主机
         Console.InitBlockList()  ' 游戏面板的方块状态信息的集合
-        Console.CreateNextBrick()  ' 生成下一个砖块
+
+        Console.Start()  ' 游戏开始
 
     End Sub
 

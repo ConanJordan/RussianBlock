@@ -41,6 +41,14 @@ Public Class GameConsole
         Next
     End Sub
 
+    ' 游戏开始
+    Public Sub Start()
+        CreateNextBrick()  ' 生成下一个砖块
+        NextBrick.DrawSelf()  ' 绘制下一个砖块
+        SetCurrentBrick()  ' 设置当前砖块
+        CurrentBrick.DrawSelf()  ' 绘制当前砖块
+    End Sub
+
     ' 生成下一个砖块
     Public Sub CreateNextBrick()
         Dim locating As Point  ' 定位像素点
@@ -88,7 +96,55 @@ Public Class GameConsole
                 alpha = New Block(locating, ConstantData.ColorFort, NextBrickGraphics, brush)
                 Me.NextBrick = New FortBrick(alpha, ConstantData.ColorFort, NextBrickGraphics, alpha.Brush)
         End Select
-        Me.NextBrick.DrawSelf()
+
+    End Sub
+
+    ' 设置当前砖块
+    Public Sub SetCurrentBrick()
+        Dim alpha As Block
+        If NextBrick.GetType.ToString = "RussianBLock.SquareBrick" Then
+            alpha = NextBrick.Alpha
+            alpha.Locating = BlockList(CurrentBrickIndex.Square).Locating
+            CurrentBrick = New SquareBrick(alpha, alpha.Color, GamePadGraphics, alpha.Brush)
+            Exit Sub
+        End If
+        If NextBrick.GetType.ToString = "RussianBLock.StraightBrick" Then
+            alpha = NextBrick.Alpha
+            alpha.Locating = BlockList(CurrentBrickIndex.Straight).Locating
+            CurrentBrick = New StraightBrick(alpha, alpha.Color, GamePadGraphics, alpha.Brush)
+            Exit Sub
+        End If
+        If NextBrick.GetType.ToString = "RussianBLock.ShapeLABrick" Then
+            alpha = NextBrick.Alpha
+            alpha.Locating = BlockList(CurrentBrickIndex.ShapeLA).Locating
+            CurrentBrick = New ShapeLABrick(alpha, alpha.Color, GamePadGraphics, alpha.Brush)
+            Exit Sub
+        End If
+        If NextBrick.GetType.ToString = "RussianBLock.ShapeLBBrick" Then
+            alpha = NextBrick.Alpha
+            alpha.Locating = BlockList(CurrentBrickIndex.ShapeLB).Locating
+            CurrentBrick = New ShapeLBBrick(alpha, alpha.Color, GamePadGraphics, alpha.Brush)
+            Exit Sub
+        End If
+        If NextBrick.GetType.ToString = "RussianBLock.ShapeSABrick" Then
+            alpha = NextBrick.Alpha
+            alpha.Locating = BlockList(CurrentBrickIndex.ShapeSA).Locating
+            CurrentBrick = New ShapeSABrick(alpha, alpha.Color, GamePadGraphics, alpha.Brush)
+            Exit Sub
+        End If
+        If NextBrick.GetType.ToString = "RussianBLock.ShapeSBBrick" Then
+            alpha = NextBrick.Alpha
+            alpha.Locating = BlockList(CurrentBrickIndex.ShapeSB).Locating
+            CurrentBrick = New ShapeSBBrick(alpha, alpha.Color, GamePadGraphics, alpha.Brush)
+            Exit Sub
+        End If
+        If NextBrick.GetType.ToString = "RussianBLock.FortBrick" Then
+            alpha = NextBrick.Alpha
+            alpha.Locating = BlockList(CurrentBrickIndex.Fort).Locating
+            CurrentBrick = New FortBrick(alpha, alpha.Color, GamePadGraphics, alpha.Brush)
+            Exit Sub
+        End If
+
     End Sub
 
     Public Property GameForm As GameForm
