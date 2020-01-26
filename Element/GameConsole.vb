@@ -101,7 +101,7 @@ Public Class GameConsole
 
     ' 设置当前砖块
     Public Sub SetCurrentBrick()
-        Dim alpha As Block = New Block()
+        Dim alpha As Block
         Dim locating As Point
         If NextBrick.GetType.ToString = "RussianBLock.SquareBrick" Then
             locating =
