@@ -1,0 +1,10 @@
+﻿[*.vb]
+
+# CA1052: スタティック ホルダー型は Static または NotInheritable でなければなりません
+dotnet_diagnostic.CA1052.severity = none
+
+# CA2000: スコープを失う前にオブジェクトを破棄
+dotnet_diagnostic.CA2000.severity = none
+
+# IDE0058: 式の値が使用されていません
+visual_basic_style_unused_value_expression_statement_preference = unused_local_variable:none
