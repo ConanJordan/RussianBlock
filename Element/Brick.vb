@@ -21,6 +21,14 @@ Public Class Brick
         Brush = paramBrush
     End Sub
 
+    ' 绘制砖块
+    Public Sub DrawSelf()
+        Alpha.DrawSelf()
+        Beta.DrawSelf()
+        Gamma.DrawSelf()
+        Delta.DrawSelf()
+    End Sub
+
     ' 砖块下沉
     Public Overridable Sub Sink()
         Move(ConstantData.Direction.Down)

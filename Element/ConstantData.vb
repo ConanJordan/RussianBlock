@@ -36,4 +36,14 @@ Public NotInheritable Class ConstantData
         Stoped = 4  ' 游戏结束
     End Enum
 
+    Public Enum BrickType As Integer  ' 砖块类别
+        Square = 1
+        Straight = 2
+        ShapeLA = 3
+        ShapeLB = 4
+        ShapeSA = 5
+        ShapeSB = 6
+        Fort = 7
+    End Enum
+
 End Class

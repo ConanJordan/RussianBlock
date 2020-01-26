@@ -8,3 +8,9 @@ dotnet_diagnostic.CA2000.severity = none
 
 # IDE0058: 式の値が使用されていません
 visual_basic_style_unused_value_expression_statement_preference = unused_local_variable:none
+
+# BC42104: 変数が、値が割り当てられる前に使用されています
+dotnet_diagnostic.BC42104.severity = none
+
+# CA1062: パブリック メソッドの引数の検証
+dotnet_diagnostic.CA1062.severity = none

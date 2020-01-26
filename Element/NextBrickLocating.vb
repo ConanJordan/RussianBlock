@@ -1,13 +1,13 @@
 ﻿' 游戏进行中，需要在【下一个砖块】的面板区域显示下一个砖块
 ' 这个类时用来记录每一种砖块在【下一个砖块】的面板区域的定位像素点的
 Public NotInheritable Class NextBrickLocating
-    Public Shared ReadOnly NextLocatingSquare As Point = CalculateLocatingSquare()
-    Public Shared ReadOnly NextLocatingStraight As Point = CalculateLocatingStraight()
-    Public Shared ReadOnly NextLocatingShapeLA As Point = CalculateLocatingShapeLA()
-    Public Shared ReadOnly NextLocatingShapeLB As Point = CalculateLocatingShapeLB()
-    Public Shared ReadOnly NextLocatingShapeSA As Point = CalculateLocatingShapeSA()
-    Public Shared ReadOnly NextLocatingShapeSB As Point = CalculateLocatingShapeSB()
-    Public Shared ReadOnly NextLocatingFort As Point = CalculateLocatingFort()
+    Public Shared ReadOnly Square As Point = CalculateLocatingSquare()
+    Public Shared ReadOnly Straight As Point = CalculateLocatingStraight()
+    Public Shared ReadOnly ShapeLA As Point = CalculateLocatingShapeLA()
+    Public Shared ReadOnly ShapeLB As Point = CalculateLocatingShapeLB()
+    Public Shared ReadOnly ShapeSA As Point = CalculateLocatingShapeSA()
+    Public Shared ReadOnly ShapeSB As Point = CalculateLocatingShapeSB()
+    Public Shared ReadOnly Fort As Point = CalculateLocatingFort()
 
     Private Shared Function CalculateLocatingSquare() As Point
         Dim x, y As Integer
