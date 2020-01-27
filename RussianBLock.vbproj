@@ -88,6 +88,7 @@
     <Compile Include="Element\GameConsole.vb" />
     <Compile Include="Element\NextBrickLocating.vb" />
     <Compile Include="Element\ShapeLABrick.vb" />
+    <Compile Include="Element\ShapeLBBrick.vb" />
     <Compile Include="Element\ShapeSABrick.vb" />
     <Compile Include="Element\ShapeSBBrick.vb" />
     <Compile Include="Element\SquareBrick.vb" />
@@ -116,7 +117,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ShapeLBBrick.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="GameForm.resx">

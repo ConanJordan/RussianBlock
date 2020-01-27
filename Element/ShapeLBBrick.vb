@@ -69,37 +69,37 @@
     Private Sub DoWhirl()
         ' 形态A→形态B
         If LeftBrick() Is Alpha AndAlso BottomBrick() Is Delta Then
-            Alpha.Locating.Offset(ConstantData.MovingDelta * 2, -ConstantData.MovingDelta)
-            Beta.Locating.Offset(ConstantData.MovingDelta, 0)
-            Gamma.Locating.Offset(0, ConstantData.MovingDelta)
-            Delta.Locating.Offset(-ConstantData.MovingDelta, 0)
+            Alpha.Offset(ConstantData.MovingDelta * 2, -ConstantData.MovingDelta)
+            Beta.Offset(ConstantData.MovingDelta, 0)
+            Gamma.Offset(0, ConstantData.MovingDelta)
+            Delta.Offset(-ConstantData.MovingDelta, 0)
             Exit Sub
         End If
 
         ' 形态B→形态C
         If TopBrick() Is Alpha AndAlso LeftBrick() Is Delta Then
-            Alpha.Locating.Offset(ConstantData.MovingDelta, ConstantData.MovingDelta * 2)
-            Beta.Locating.Offset(0, ConstantData.MovingDelta)
-            Gamma.Locating.Offset(-ConstantData.MovingDelta, 0)
-            Delta.Locating.Offset(0, -ConstantData.MovingDelta)
+            Alpha.Offset(ConstantData.MovingDelta, ConstantData.MovingDelta * 2)
+            Beta.Offset(0, ConstantData.MovingDelta)
+            Gamma.Offset(-ConstantData.MovingDelta, 0)
+            Delta.Offset(0, -ConstantData.MovingDelta)
             Exit Sub
         End If
 
         ' 形态C→形态D
         If RightBrick() Is Alpha AndAlso TopBrick() Is Delta Then
-            Alpha.Locating.Offset(-ConstantData.MovingDelta * 2, ConstantData.MovingDelta)
-            Beta.Locating.Offset(-ConstantData.MovingDelta, ConstantData.MovingDelta)
-            Gamma.Locating.Offset(0, -ConstantData.MovingDelta)
-            Delta.Locating.Offset(ConstantData.MovingDelta, 0)
+            Alpha.Offset(-ConstantData.MovingDelta * 2, ConstantData.MovingDelta)
+            Beta.Offset(-ConstantData.MovingDelta, ConstantData.MovingDelta)
+            Gamma.Offset(0, -ConstantData.MovingDelta)
+            Delta.Offset(ConstantData.MovingDelta, 0)
             Exit Sub
         End If
 
         ' 形态D→形态A
         If BottomBrick() Is Alpha AndAlso RightBrick() Is Delta Then
-            Alpha.Locating.Offset(-ConstantData.MovingDelta, -ConstantData.MovingDelta * 2)
-            Beta.Locating.Offset(0, -ConstantData.MovingDelta)
-            Gamma.Locating.Offset(ConstantData.MovingDelta, 0)
-            Delta.Locating.Offset(0, -ConstantData.MovingDelta)
+            Alpha.Offset(-ConstantData.MovingDelta, -ConstantData.MovingDelta * 2)
+            Beta.Offset(0, -ConstantData.MovingDelta)
+            Gamma.Offset(ConstantData.MovingDelta, 0)
+            Delta.Offset(0, -ConstantData.MovingDelta)
             Exit Sub
         End If
     End Sub
