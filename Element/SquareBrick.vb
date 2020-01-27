@@ -21,40 +21,9 @@ Public NotInheritable Class SquareBrick
 
     ' 砖块下沉
     Public Overrides Sub Sink()
-        ' 擦除砖块Alpha和Beta
-        Block.DoErase(Graphics, Alpha.Locating)
-        Block.DoErase(Graphics, Beta.Locating)
-
+        DoErase()  ' 擦除砖块
         MyBase.Sink()  ' 调用父类方法
-
-        ' 绘制砖块Gamma和Delta
-        Gamma.DrawSelf()
-        Delta.DrawSelf()
-    End Sub
-
-    ' 砖块移动
-    Public Overrides Sub Move(direction As Integer)
-        If direction = ConstantData.Direction.Left Then   ' 向左移动
-            ' 擦除砖块Beta和Delta
-            Block.DoErase(Graphics, Beta.Locating)
-            Block.DoErase(Graphics, Delta.Locating)
-
-            MyBase.Move(direction)  ' 调用父类方法
-
-            ' 绘制砖块Alpha和Gamma
-            Alpha.DrawSelf()
-            Gamma.DrawSelf()
-        End If
-        If direction = ConstantData.Direction.Right Then  ' 向右移动
-            ' 擦除砖块Alpha和Gamma
-            Block.DoErase(Graphics, Alpha.Locating)
-            Block.DoErase(Graphics, Gamma.Locating)
-            MyBase.Move(direction)  ' 调用父类方法
-            ' 绘制砖块Beta和Delta
-            Beta.DrawSelf()
-            Delta.DrawSelf()
-        End If
-
+        DrawSelf()  ' 绘制砖块
     End Sub
 
     ' 砖块旋转（顺时针）

@@ -20,19 +20,9 @@ Public NotInheritable Class StraightBrick
 
     ' 方块下沉
     Public Overrides Sub Sink()
-        ' 擦除砖块Alpha,Beta,Gamma,Delta
-        Block.DoErase(Graphics, Alpha.Locating)
-        Block.DoErase(Graphics, Beta.Locating)
-        Block.DoErase(Graphics, Gamma.Locating)
-        Block.DoErase(Graphics, Delta.Locating)
-
+        DoErase()  ' 擦除砖块
         MyBase.Sink()  ' 调用父类方法
-
-        ' 绘制砖块Alpha,Beta,Gamma,Delta
-        Alpha.DrawSelf()
-        Beta.DrawSelf()
-        Gamma.DrawSelf()
-        Delta.DrawSelf()
+        DrawSelf()  ' 绘制砖块
     End Sub
 
     ' 砖块移动

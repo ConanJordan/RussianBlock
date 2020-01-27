@@ -90,13 +90,19 @@ Public Class Block
     ' 绘制方块
     Public Sub DrawSelf()
         Brush.Color = Me.Color
+        Rec = New Rectangle(Locating.X - 8, Locating.Y - 8, ConstantData.LengthInside, ConstantData.LengthInside)
         Graphics.FillRectangle(Brush, Rec)
     End Sub
 
-    ' 擦除砖块
+    ' 擦除方块
     Public Shared Sub DoErase(graphics As Graphics, locating As Point)
         EraseRec = New Rectangle(locating.X - 8, locating.Y - 8, ConstantData.LengthInside, ConstantData.LengthInside)
         graphics.FillRectangle(EraseBrush, eraseRec)
+    End Sub
+
+    ' 移动方块（移动方块的定位像素点）
+    Public Sub Offset(x As Integer, y As Integer)
+        Locating = New Point(Locating.X + x, Locating.Y + y)
     End Sub
 
 End Class

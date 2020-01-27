@@ -29,6 +29,14 @@ Public Class Brick
         Delta.DrawSelf()
     End Sub
 
+    ' 擦除砖块
+    Public Sub DoErase()
+        Block.DoErase(Graphics, Alpha.Locating)
+        Block.DoErase(Graphics, Beta.Locating)
+        Block.DoErase(Graphics, Gamma.Locating)
+        Block.DoErase(Graphics, Delta.Locating)
+    End Sub
+
     ' 砖块下沉
     Public Overridable Sub Sink()
         Move(ConstantData.Direction.Down)
@@ -40,28 +48,28 @@ Public Class Brick
             Case ConstantData.Direction.Stilless  ' 静止
             Case ConstantData.Direction.Down  ' 向下移动
                 ' 四个砖块向下移动一个方块的距离
-                Alpha.Locating.Offset(0, ConstantData.MovingDelta)
-                Beta.Locating.Offset(0, ConstantData.MovingDelta)
-                Gamma.Locating.Offset(0, ConstantData.MovingDelta)
-                Delta.Locating.Offset(0, ConstantData.MovingDelta)
+                Alpha.Offset(0, ConstantData.MovingDelta)
+                Beta.Offset(0, ConstantData.MovingDelta)
+                Gamma.Offset(0, ConstantData.MovingDelta)
+                Delta.Offset(0, ConstantData.MovingDelta)
             Case ConstantData.Direction.Up  ' 向上移动
                 ' 四个砖块向上移动一个方块的距离
-                Alpha.Locating.Offset(0, -ConstantData.MovingDelta)
-                Beta.Locating.Offset(0, -ConstantData.MovingDelta)
-                Gamma.Locating.Offset(0, -ConstantData.MovingDelta)
-                Delta.Locating.Offset(0, -ConstantData.MovingDelta)
+                Alpha.Offset(0, -ConstantData.MovingDelta)
+                Beta.Offset(0, -ConstantData.MovingDelta)
+                Gamma.Offset(0, -ConstantData.MovingDelta)
+                Delta.Offset(0, -ConstantData.MovingDelta)
             Case ConstantData.Direction.Left  ' 向左移动
                 ' 四个砖块向左移动一个方块的距离
-                Alpha.Locating.Offset(-ConstantData.MovingDelta, 0)
-                Beta.Locating.Offset(-ConstantData.MovingDelta, 0)
-                Gamma.Locating.Offset(-ConstantData.MovingDelta, 0)
-                Delta.Locating.Offset(-ConstantData.MovingDelta, 0)
+                Alpha.Offset(-ConstantData.MovingDelta, 0)
+                Beta.Offset(-ConstantData.MovingDelta, 0)
+                Gamma.Offset(-ConstantData.MovingDelta, 0)
+                Delta.Offset(-ConstantData.MovingDelta, 0)
             Case ConstantData.Direction.Right  ' 向右移动
                 ' 四个砖块向右移动一个方块的距离
-                Alpha.Locating.Offset(ConstantData.MovingDelta, 0)
-                Beta.Locating.Offset(ConstantData.MovingDelta, 0)
-                Gamma.Locating.Offset(ConstantData.MovingDelta, 0)
-                Delta.Locating.Offset(ConstantData.MovingDelta, 0)
+                Alpha.Offset(ConstantData.MovingDelta, 0)
+                Beta.Offset(ConstantData.MovingDelta, 0)
+                Gamma.Offset(ConstantData.MovingDelta, 0)
+                Delta.Offset(ConstantData.MovingDelta, 0)
         End Select
     End Sub
 

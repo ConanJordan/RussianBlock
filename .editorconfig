@@ -14,3 +14,6 @@ dotnet_diagnostic.BC42104.severity = none
 
 # CA1062: パブリック メソッドの引数の検証
 dotnet_diagnostic.CA1062.severity = none
+
+# CA2211: 非定数フィールドは表示されません
+dotnet_diagnostic.CA2211.severity = none
