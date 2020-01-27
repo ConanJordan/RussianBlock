@@ -95,7 +95,7 @@ Public Class Block
 
     ' 擦除砖块
     Public Shared Sub DoErase(graphics As Graphics, locating As Point)
-        EraseRec = New Rectangle(locating.X, locating.Y, ConstantData.LengthInside, ConstantData.LengthInside)
+        EraseRec = New Rectangle(locating.X - 8, locating.Y - 8, ConstantData.LengthInside, ConstantData.LengthInside)
         graphics.FillRectangle(EraseBrush, eraseRec)
     End Sub
 

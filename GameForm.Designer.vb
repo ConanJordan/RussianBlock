@@ -83,28 +83,28 @@ Partial Class GameForm
         '
         Me.MI_Start.Name = "MI_Start"
         Me.MI_Start.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D1), System.Windows.Forms.Keys)
-        Me.MI_Start.Size = New System.Drawing.Size(153, 24)
+        Me.MI_Start.Size = New System.Drawing.Size(180, 24)
         Me.MI_Start.Text = "开始"
         '
         'MI_Pause
         '
         Me.MI_Pause.Name = "MI_Pause"
         Me.MI_Pause.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D2), System.Windows.Forms.Keys)
-        Me.MI_Pause.Size = New System.Drawing.Size(153, 24)
+        Me.MI_Pause.Size = New System.Drawing.Size(180, 24)
         Me.MI_Pause.Text = "暂停"
         '
         'MI_Stop
         '
         Me.MI_Stop.Name = "MI_Stop"
         Me.MI_Stop.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D3), System.Windows.Forms.Keys)
-        Me.MI_Stop.Size = New System.Drawing.Size(153, 24)
+        Me.MI_Stop.Size = New System.Drawing.Size(180, 24)
         Me.MI_Stop.Text = "结束"
         '
         'MI_Difficulty
         '
         Me.MI_Difficulty.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MI_DiffRookie, Me.MI_DiffJunior, Me.MI_DiffNormal, Me.MI_DiffVeteran, Me.MI_DiffMaster})
         Me.MI_Difficulty.Name = "MI_Difficulty"
-        Me.MI_Difficulty.Size = New System.Drawing.Size(153, 24)
+        Me.MI_Difficulty.Size = New System.Drawing.Size(180, 24)
         Me.MI_Difficulty.Text = "难度"
         '
         'MI_DiffRookie
@@ -155,13 +155,13 @@ Partial Class GameForm
         'MI_AboutGame
         '
         Me.MI_AboutGame.Name = "MI_AboutGame"
-        Me.MI_AboutGame.Size = New System.Drawing.Size(180, 24)
+        Me.MI_AboutGame.Size = New System.Drawing.Size(130, 24)
         Me.MI_AboutGame.Text = "关于游戏"
         '
         'MI_OperateGuide
         '
         Me.MI_OperateGuide.Name = "MI_OperateGuide"
-        Me.MI_OperateGuide.Size = New System.Drawing.Size(180, 24)
+        Me.MI_OperateGuide.Size = New System.Drawing.Size(130, 24)
         Me.MI_OperateGuide.Text = "操作指南"
         '
         'PN_NextBrick

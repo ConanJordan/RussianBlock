@@ -96,7 +96,11 @@ Public Class GameConsole
                 alpha = New Block(locating, ConstantData.ColorFort, NextBrickGraphics, brush)
                 Me.NextBrick = New FortBrick(alpha, ConstantData.ColorFort, NextBrickGraphics, alpha.Brush)
         End Select
+    End Sub
 
+    ' 游戏运行
+    Public Sub Run()
+        CurrentBrick.Sink()
     End Sub
 
     ' 设置当前砖块

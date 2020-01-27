@@ -40,6 +40,8 @@
         Console.InitBlockList()  ' 游戏面板的方块状态信息的集合
 
         Console.Start()  ' 游戏开始
+        MI_Start.Enabled = False
+        TI_Game.Enabled = True
 
     End Sub
 
@@ -72,11 +74,16 @@
 
     ' 计时器
     Private Sub TI_Game_Tick(sender As Object, e As EventArgs) Handles TI_Game.Tick
-
+        Console.Run()
     End Sub
 
     ' 关于游戏
     Private Sub MI_AboutGame_Click(sender As Object, e As EventArgs) Handles MI_AboutGame.Click
         MessageBox.Show("使用VB编写的俄罗斯方块。" & vbCrLf & "@Author 李舟", "俄罗斯方块")
+    End Sub
+
+    ' 暂停
+    Private Sub MI_Pause_Click(sender As Object, e As EventArgs) Handles MI_Pause.Click
+        TI_Game.Enabled = False
     End Sub
 End Class
